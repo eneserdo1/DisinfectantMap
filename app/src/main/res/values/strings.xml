@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DisinfectantMap</string>
+    <string name="selected_item">Selected item</string>
+
+    <string-array name="Dezenfektanlar">
+        <item>Dezenfektan Standı</item>
+        <item>Dezenfektan Kabini</item>
+    </string-array>
+    <string name="title_activity_maps">Map</string>
+</resources>

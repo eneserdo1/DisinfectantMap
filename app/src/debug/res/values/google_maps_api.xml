@@ -1,0 +1,24 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=DC:78:BB:5B:98:90:96:BA:E1:B6:6D:CB:6A:A3:D2:6A:F8:5B:75:AF%3Bcom.eneserdogan.disinfectantmap
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    com.eneserdogan.disinfectantmap
+
+    SHA-1 certificate fingerprint:
+    DC:78:BB:5B:98:90:96:BA:E1:B6:6D:CB:6A:A3:D2:6A:F8:5B:75:AF
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCyH2aID-LOQuEdR_JJok1QZp50h9ADhrE</string>
+</resources>
