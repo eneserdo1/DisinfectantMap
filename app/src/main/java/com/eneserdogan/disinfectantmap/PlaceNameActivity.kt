@@ -75,7 +75,7 @@ class PlaceNameActivity : AppCompatActivity() {
         grantResults: IntArray
     ) {
         if (requestCode == 2){
-            if (grantResults.size>0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+            if (grantResults.size> 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
                 val intent=Intent(Intent.ACTION_PICK,MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
                 startActivityForResult(intent,1)
             }
@@ -104,6 +104,7 @@ class PlaceNameActivity : AppCompatActivity() {
     fun next(view:View){
         globalImage=chosenImage
         globalName=secilen
+        println("seçilen ="+ globalName)
         globalTitle=placeTitle.text.toString()
 
         val intent=Intent(applicationContext,MapsActivity::class.java)

@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         ParseUser.logInInBackground(userNameText.text.toString(),userPasswordText.text.toString(),
             LogInCallback { user, e ->
-                if (e != null){
+                if (e!= null){
 
                     Toast.makeText(applicationContext,e.localizedMessage,Toast.LENGTH_LONG).show()
                 }else{
@@ -41,19 +41,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun kayıtOl(view:View){
-        val user=ParseUser()
-        user.username=userNameText.text.toString()
-        user.setPassword(userPasswordText.text.toString())
-
-        user.signUpInBackground { e: ParseException? ->
-            if(e  != null){
-                Toast.makeText(applicationContext,e.localizedMessage,Toast.LENGTH_LONG).show()
-            }else{
-                Toast.makeText(applicationContext,"Kullanıcı Oluşturuldu",Toast.LENGTH_LONG).show()
-                val intent=Intent(applicationContext,LocationsActivity::class.java)
-                startActivity(intent)
-            }
-        }
-
+        val intent=Intent(applicationContext,SignUpActivity::class.java)
+        startActivity(intent)
     }
 }
