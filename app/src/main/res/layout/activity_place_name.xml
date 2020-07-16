@@ -7,31 +7,66 @@
     android:orientation="vertical"
     android:gravity="center"
     tools:context=".PlaceNameActivity">
-    <ImageView
-        android:id="@+id/placeImage"
-        android:layout_width="250dp"
-        android:layout_marginBottom="40dp"
-        android:onClick="selectImage"
-        android:background="@drawable/ic_photo_camera_black_24dp"
-        android:layout_height="250dp"/>
-    <Spinner
-        android:id="@+id/placeSpinner"
-        android:layout_width="250dp"
-        android:layout_height="50dp"/>
-    <EditText
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:id="@+id/placeTitle"
-        android:layout_marginTop="30dp"/>
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="25dp"
+        app:cardCornerRadius="25dp"
+        android:layout_width="300dp"
+        android:layout_height="250dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/placeImage"
+                android:layout_width="250dp"
+                android:onClick="selectImage"
+                android:background="@drawable/ic_photo_camera_black_24dp"
+                android:layout_height="250dp"/>
 
-    <ImageView
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="30dp"
+        android:layout_width="300dp"
+        app:cardCornerRadius="25dp"
+        android:layout_height="200dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+            <Spinner
+                android:id="@+id/placeSpinner"
+                android:layout_width="250dp"
+                android:layout_height="60dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="250dp"
+                android:layout_height="60dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/placeTitle"
+                    android:hint="Title"
+                    android:fontFamily="sans-serif-thin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <Button
+        android:background="#ffeb3b"
+        android:textSize="20sp"
         android:id="@+id/nextImage"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="180dp"
         android:onClick="next"
-        android:background="@drawable/ic_arrow_forward_black_24dp"
+        android:fontFamily="monospace"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="70dp"
         android:layout_width="80dp"
-        android:layout_height="50dp"/>
+        android:layout_height="50dp"
+        android:text="Next"/>
 
 
 </LinearLayout>

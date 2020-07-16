@@ -5,36 +5,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/login2"
     android:gravity="center"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/userNameText"
-        android:layout_width="260dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="40dp"
-        android:ems="10"
-        android:hint="Kullanıcı Adı"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="167dp" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="280dp"
+        android:layout_height="60dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:ems="10"
+            android:hint="Username"
+            android:inputType="textPersonName"
+            android:textColor="#fff"
+            android:id="@+id/userNameText"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:drawablePadding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/userPasswordText"
-        android:layout_width="260dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:hint="Şifre"
-        android:inputType="textPassword"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="248dp" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="280dp"
+        android:layout_height="60dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:ems="10"
+            android:textColor="#fff"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:id="@+id/userPasswordText"
+            android:layout_width="match_parent"
+            android:drawableLeft="@drawable/ic_https_black_24dp"
+            android:drawablePadding="10dp"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
     <Button
         android:id="@+id/btnGirisYap"
-        android:layout_width="240dp"
+        android:layout_width="260dp"
         android:layout_height="40dp"
-        android:text="Giriş yap"
+        android:text="Sıgn ın"
         android:onClick="girisYap"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:background="@color/colorAccent"
         />
     <TextView
@@ -43,5 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:onClick="kayıtOl"
-        android:text="Henüz Kayıtlı değil misiniz?Kayıt ol"/>
+        android:textColor="#fff"
+        android:layout_marginBottom="45dp"
+        android:text="Not registered yet? Register"/>
 </LinearLayout>
